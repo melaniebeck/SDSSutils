@@ -44,5 +44,6 @@ from jpegCreator import *
 fileCreator.bashScript(data, 'jpgURLs.sh')
 ```
 
-In the terminal: `source jpgURLs.sh` will start the jpg download. 
-Note: `data` needs to have columns for ra, dec, scale, height, width, and options for *each* galaxy 
+Notes: 
+1. In the terminal: `source jpgURLs.sh` will start the jpg download. 
+2. `data` needs to have columns 'ra', 'dec', 'scale', 'height', 'width', and 'options' with an entry for *each* galaxy to create a jpeg for
