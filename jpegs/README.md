@@ -37,7 +37,7 @@ jpg = jpegURL(ra, dec, scale, height, width, options='SGPMQ')
 print jpg.url
 ```
 
-## Example usage 2) Create a file with a list of jpg urls for wget-ing
+## Example usage 2) Create a bash script with a list of jpg urls for wget-ing
 ``` 
 from jpegCreator import *
 
@@ -49,3 +49,16 @@ Notes:
 1. In the terminal: `source jpgURLs.sh` will start the jpg download. 
 
 2. `data` needs to have columns 'ra', 'dec', 'scale', 'height', 'width', and 'options' with an entry for *each* galaxy to create a jpeg for
+
+
+## Example usage 3) Create a text file with a list of jpg urls for wget-ing
+``` 
+from jpegCreator import *
+
+fileCreator.asciiList(data, 'jpgURLs.txt')
+```
+1. In the terminal: `wget -i jpgURLs.txt` will start the jpg download. 
+
+2. `data` needs to have columns 'ra', 'dec', 'scale', 'height', 'width', and 'options' with an entry for *each* galaxy to create a jpeg for
+
+
