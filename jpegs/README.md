@@ -38,7 +38,8 @@ print jpg.url
 ```
 
 ## Example usage 2) Create a file with a list of jpg urls for wget-ing
-``` from jpegCreator import *
+``` 
+from jpegCreator import *
 
 fileCreator.bashScript(data, 'jpgURLs.sh')
 ```
