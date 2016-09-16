@@ -42,5 +42,6 @@ print jpg.url
 
 fileCreator.bashScript(data, 'jpgURLs.sh')
 ```
+
 In the terminal: `source jpgURLs.sh` will start the jpg download. 
 Note: `data` needs to have columns for ra, dec, scale, height, width, and options for *each* galaxy 
