@@ -28,3 +28,19 @@ or you can just make an ascii file that lists all the jpeg url names.\\
 |Q	    |Plates         |
 |I	    |InvertImage    |
 
+
+## Example usage 1) Create a single jpeg url
+```
+from jpegCreator import *
+
+jpg = jpegURL(ra, dec, scale, height, width, options='SGPMQ')
+print jpg.url
+```
+
+## Example usage 2) Create a file with a list of jpg urls for wget-ing
+``` from jpegCreator import *
+
+fileCreator.bashScript(data, 'jpgURLs.sh')
+```
+In the terminal: `source jpgURLs.sh` will start the jpg download. 
+Note: `data` needs to have columns for ra, dec, scale, height, width, and options for *each* galaxy 

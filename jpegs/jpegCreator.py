@@ -19,7 +19,7 @@ class jpegURL(object):
 
 
     def createURL(self):
-        prefix = "http://skyservice.pha.jhu.edu/DR10/ImgCutout/"
+        prefix = "http://skyservice.pha.jhu.edu/DR12/ImgCutout/"
 
         url = prefix+"getjpeg.aspx?ra={0}&dec={1}&width={2}&height={3}"\
               "&scale={4}&opt={5}.jpg".format(self.ra, self.dec, self.width,
@@ -47,9 +47,7 @@ class fileCreator(object):
 
         F = open(filename,'w')
         for entry in SDSSDataList:
-            s = jpegURL(ra=entry['ra'], dec=entry['dec'], 
-                        width=entry['width'], height=entry['height'],
-                        scale=entry['scale'], options=entry['options'])
+            s = jpegURL(ra=entry['ra'], dec=entry['dec'], options=entry['options'])
             F.write('{0}\n'.format(s.url))
         F.close()
         return filename
