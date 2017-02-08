@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 
-class jpegURL(object):
+class jpeg(object):
 
     def __init__(self, ra=None, dec=None, scale=0.396, 
                  height=512, width=512, options=''):
